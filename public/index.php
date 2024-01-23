@@ -25,6 +25,7 @@ $app->get('/', 'App\Controller\AlbumsController:default');
 $app->get('/details/{id:[0-9]+}', 'App\Controller\AlbumsController:details');
 $app->get('/search', 'App\Controller\AlbumsController:search');
 $app->any('/form', 'App\Controller\AlbumsController:form');
+$app->get('/api', 'App\Controller\ApiController:search');
 
 $errorMiddleware =$app->addErrorMiddleware(true, true, true);
 
